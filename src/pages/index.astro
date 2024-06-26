@@ -1,19 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import Badge from '../components/badge.astro';
-import Social from '../components/social.astro';
+import Badge from '../components/Badge.astro';
+import Social from '../components/Social.astro';
 import LinkedInIcon from '../icons/linkedIn.astro'
 import GithubIcon from '../icons/git.astro'
 import MailIcon from '../icons/mail.astro'
+import Briefcase from '../icons/Briefcase.astro'
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
 ---
 
 <Layout 
 	title="Porfolio de Daniel - Desarrollador y Programador Web"
 >
 	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44">
-
+		<SectionContainer class="py-40 pb-24">
 			<!-- foto de perfil -->
 			<img 
 				class="rounded-full w-12 h-12 mb-4"
@@ -31,7 +33,7 @@ import MailIcon from '../icons/mail.astro'
 				<span>3 años de Experiencia.</span> 
 				<span class="text-yellow-200/90 ">Desarrollador Web Backend y Frontend.</span>
 				<span class="text-red-100/90">De Valencia, Venezuela</span>, 
-				<span class="opacity-85">Espicalizado en crear app unicas</span>
+				<span class="opacity-85">Especializado en crear app unicas</span>
 			</h2>
 
 			<!-- Botones con iconos -->
@@ -49,7 +51,15 @@ import MailIcon from '../icons/mail.astro'
 					danielsrkt@gmail.com
 				</Social>
 			</nav>
-		</section>
+		</SectionContainer>
+		
+		<SectionContainer >
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Briefcase class="size-7"/>
+				Experiencia Laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
 	</main>
 </Layout>                 
 
