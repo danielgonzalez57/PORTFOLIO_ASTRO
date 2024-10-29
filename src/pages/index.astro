@@ -4,33 +4,35 @@ import Card from '../components/Card.astro';
 import Badge from '../components/Badge.astro';
 import Social from '../components/Social.astro';
 import LinkedInIcon from '../icons/linkedIn.astro'
+import Code from '../icons/Code.astro'
 import GithubIcon from '../icons/git.astro'
 import MailIcon from '../icons/mail.astro'
 import Briefcase from '../icons/Briefcase.astro'
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
+import Projects from '../components/Projects.astro';
 ---
 
 <Layout 
 	title="Porfolio de Daniel - Desarrollador y Programador Web con 3 años de experiencia"
 	description="Contrata a daniel para crear tu aplicacion web o movil"
 >
-	<main>
+	<main class="px-4">
 		<SectionContainer class="py-40 pb-24" >
 			<!-- foto de perfil -->
 			<img 
 				class="rounded-full size-12 mb-4"
 				src="../../public/perfil.jpeg" 
 				alt="foto de perfil"
-    		> 
+    		>  
 
 			<!-- discripcion -->
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">Hey, soy Daniel 
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">Hey, soy Daniel 
 				<a href="#" class="flex justify-center items-center" target="_blank" rel="noopener">
 					<Badge>Disponible para Trabajar</Badge>
 				</a>
 			</h1>
-			<h2 class="text-2xl text-wrap">
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
 				<span>3 años de Experiencia.</span> 
 				<span class="text-yellow-200/90 ">Desarrollador Web Backend y Frontend.</span>
 				<span class="text-red-100/90">De Valencia, Venezuela</span>, 
@@ -38,28 +40,37 @@ import SectionContainer from '../components/SectionContainer.astro';
 			</h2>
 
 			<!-- Botones con iconos -->
-			<nav class="flex gap-x-4 mt-7">
+			<nav class="flex gap-4 mt-7 flex-wrap">
 				<Social href="#">
-					<LinkedInIcon class="size-6"/>
+					<LinkedInIcon class="size-4 md:size-6"/>
 					LinkedIn
 				</Social>
 				<Social href="#">
-					<GithubIcon class="size-6"/>
+					<GithubIcon class="size-4 md:size-6"/>
 					Github
 				</Social>
 				<Social href="#">
-					<MailIcon class="size-6"/>
+					<MailIcon class="size-4 md:size-6"/>
 					danielsrkt@gmail.com
 				</Social>
 			</nav>
 		</SectionContainer>
 		
 		<SectionContainer id="experiencia">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Briefcase class="size-7"/>
 				Experiencia Laboral
 			</h2>
 			<Experience />
+		</SectionContainer>
+
+		<!-- Proyectos -->
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Code class="size-7"/>
+				Proyectos
+			</h2>
+			<Projects />
 		</SectionContainer>
 	</main>
 </Layout>                 
