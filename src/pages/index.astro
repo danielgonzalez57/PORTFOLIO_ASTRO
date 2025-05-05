@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Badge from '../components/Badge.astro';
+import Skill from '../components/Skill.astro';
 import Social from '../components/Social.astro';
 import LinkedInIcon from '../icons/linkedIn.astro'
 import Code from '../icons/Code.astro'
@@ -29,7 +30,7 @@ import Projects from '../components/Projects.astro';
 			<!-- discripcion -->
 			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">Hey, soy Daniel 
 				<a href="#" class="flex justify-center items-center" target="_blank" rel="noopener">
-					<Badge>Disponible para Trabajar</Badge>
+					<Badge>Disponible para trabajar</Badge>
 				</a>
 			</h1>
 			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
@@ -62,6 +63,14 @@ import Projects from '../components/Projects.astro';
 				Experiencia Laboral
 			</h2>
 			<Experience />
+		</SectionContainer>
+		
+		<SectionContainer id="Skill">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Briefcase class="size-7"/>
+				Skill
+			</h2>
+			<Skill />
 		</SectionContainer>
 
 		<!-- Proyectos -->
